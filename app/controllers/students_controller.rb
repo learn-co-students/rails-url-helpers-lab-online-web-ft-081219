@@ -1,4 +1,4 @@
-class StudentsController < ApplicationController
+class StudentsController 
   before_action :set_student, only: :show
   
   def index
@@ -13,4 +13,5 @@ class StudentsController < ApplicationController
     def set_student
       @student = Student.find(params[:id])
     end
+end
 end
