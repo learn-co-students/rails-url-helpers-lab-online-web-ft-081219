@@ -6,6 +6,19 @@ class StudentsController < ApplicationController
   end
 
   def show
+    set_student
+  end
+
+  def activate
+    set_student
+
+    # if set_student.active 
+    #   set_student.active = false
+    # else
+    #   set_student.active = true
+    # end
+
+    redirect_to student_path(set_student)
   end
 
   private
